@@ -1,0 +1,11 @@
+{
+  "id": "rmqb6d2j01:1:mqb73msr",
+  "ts": 1781285005611,
+  "author": "jeongseokoh",
+  "provider": "claude",
+  "title": "지금 AI 연구자의 사이트로써 지금 사이트는 충분해?",
+  "summary": "완료했습니다.\n\n## 한 일 요약\n\n토론 결론(\"부족한 건 디자인이 아니라 실재하는 증거의 연결\")을 코드로 구현했습니다. 핵심은 **placeholder를 채우는 게 아니라 코드 구조로 차단**한 것입니다.\n\n**1순위 — 가짜 신호 제거 (`#`·루트 도메인 12건 전부 삭제)**\n- `data.ts`: `href`를 optional로 변경(**스키마 변경 → 마이그레이션 체크리스트 반영**), placeholder 제거, `bibtex`/`cvUrl`/`scholar` 필드 신설 + 작성 가이드 주석\n- `Publications`/`Projects`/`Contact`: href가 있으면 링크, 없으면 비링크 렌더 → **사용자가 실값을 넣기 전까지 깨진 링크가 아예 안 보임**\n\n**2순위 — 학술 신뢰·발견성 골격**\n- `Publications`: BibTeX 복사 버튼 (`bibtex` 채우면 노출)\n- `Contact`: CV 다운로드 버튼 (`cvUrl` 채우면 노출), 빈 소셜 링크 자동 숨김\n- `About`: Scholar 인용 지표 배지 (`scholar` 채우면 노출)\n- `layout.tsx`: `openGraph`/`twitter`/`metadataBase` 보강 (Next.js 16 문서 확인 — deprecation 없음)\n\n**검증**: `npm run build` 통과(타입 에러 0), placeholder grep 0건. 팀 그래프 `concept-root` 노드 갱신. `content/link-integrity` 브랜치에 한국어로 커밋(`3ab241e`).\n\n## 사용자가 직접 채울 것 (코드로 대체 불가)\n`data.ts`의 `// TODO` 자리에 실제 값을 넣으면 해당 링크/버튼이 **자동 노출**됩니다:\n- Scholar/GitHub/arXiv/LinkedIn 실제 프로필 URL\n- 논문별 arXiv/PDF URL + BibTeX, 프로젝트별 GitHub repo URL\n- `public/cv.pdf`, `public/og.png`, `metadataBase`의 배포 도메인\n\n이 둘만 채우면 \"데모 템플릿 → 연구자 사이트\" 경계를 넘습니다.",
+  "mode": "normal",
+  "files": [],
+  "nodeIds": []
+}
