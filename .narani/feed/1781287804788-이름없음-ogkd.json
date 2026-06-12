@@ -1,0 +1,14 @@
+{
+  "id": "rmqb8glzn1:1:mqb8rmno",
+  "ts": 1781287804788,
+  "author": "이름없음",
+  "provider": "claude",
+  "title": "[콘텐츠 소스] 이 도메인은 뭐야?",
+  "summary": "You've hit your session limit · resets 4:10am (Asia/Seoul)",
+  "mode": "plan",
+  "files": [
+    ".narani/history/graph-1781285051457.json",
+    ".narani/history/graph-1781285641619.json"
+  ],
+  "nodeIds": []
+}
