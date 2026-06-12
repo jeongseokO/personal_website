@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #06060a;
+  --foreground: #e8e8f0;
+  --accent: #6d6bff;
+  --accent-2: #ff5d9e;
+
+  /* 테마 인식 표면 토큰 (라이트/다크 모두에서 가독성 유지) */
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --hairline: rgba(255, 255, 255, 0.06);
+}
+
+:root[data-theme="light"] {
+  --background: #f6f6fb;
+  --foreground: #16161d;
+  --accent: #5b59f0;
+  --accent-2: #e23d86;
+
+  --card-bg: rgba(15, 15, 30, 0.04);
+  --card-border: rgba(15, 15, 30, 0.1);
+  --hairline: rgba(15, 15, 30, 0.1);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  /* 테마 전환을 부드럽게 */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 은은한 그라데이션 텍스트 */
+.text-gradient {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 글래스 카드 — 테마 토큰 기반 */
+.glass {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(12px);
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(109, 107, 255, 0.4);
+  border-radius: 4px;
+}
+
+/* 접근성: 동작 줄이기 선호 시 부드러운 스크롤·전환 비활성 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    transition: none;
+  }
 }

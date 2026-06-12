@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "layers": [
+    "컨셉",
+    "도메인",
+    "컴포넌트",
+    "구현"
+  ],
+  "nodes": [
+    {
+      "id": "concept-root",
+      "layer": 1,
+      "parent": null,
+      "title": "프로젝트 컨셉",
+      "why": "",
+      "what": "",
+      "how": "",
+      "input": "",
+      "output": "",
+      "updatedBy": "user",
+      "updatedAt": 1781249309317
+    }
+  ],
+  "edges": []
+}

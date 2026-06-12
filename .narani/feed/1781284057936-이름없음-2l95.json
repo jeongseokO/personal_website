@@ -1,0 +1,21 @@
+{
+  "id": "rmqb6d2j01:0:mqb6jbkg",
+  "ts": 1781284057936,
+  "author": "이름없음",
+  "provider": "claude",
+  "title": "지금 AI 연구자의 사이트로써 지금 사이트는 충분해?",
+  "summary": "이해했습니다. 사회자로서 마지막 항목인 **단계별 계획**을 제 판단으로 단정적으로 제시하며 종합을 마무리합니다.\n\n### 4. 결론 실행을 위한 단계별 계획\n\n**1순위 — 실데이터 연결 (코드 변경 거의 없음, 효과 최대)**\n1. `src/lib/data.ts:12-15` 소셜 4개를 실제 프로필로 교체 — Scholar 개인 프로필 ID, GitHub 사용자명, arXiv author 페이지, LinkedIn 핸들. 실값이 없는 항목은 **링크를 지우는 게 깨진 채 두는 것보다 낫다**(가짜 신호 제거).\n2. `data.ts:49·58·66·74` 논문 4개의 `href: \"#\"`를 실제 arXiv/PDF/DOI로 교체. 미발표 논문은 카드를 빼거나 \"in submission\"으로 명시 — `#`은 금지.\n3. `data.ts:92·100·108·116` 프로젝트 4개 `href`를 실제 GitHub 레포로 교체.\n\n**2순위 — 학술 신뢰·발견성 보강 (추가 구현)**\n4. `public/`에 CV PDF 배치 + Hero/Contact에 다운로드 버튼 추가.\n5. `Publications.tsx`에 논문별 BibTeX 복사 버튼 추가(데이터에 `bibtex` 필드 신설).\n6. About 또는 Research 상단에 Scholar 인용 지표(인용 수·h-index) 정적 표기.\n7. `layout.tsx:15-25` 메타데이터에 OG 이미지·canonical URL 추가, 논문 발견성용 메타 보강.\n\n**투자하지 말 것**: three.js 씬, 테마 토글 등 시각 요소 — 이미 충분하다.\n\n**핵심**: 1순위는 사용자 고유의 실제 URL이 있어야 실행 가능하며, 그것이 \"데모 템플릿 → 연구자 사이트\" 경계를 넘는 단 하나의 결정적 단계다. 2순위는 그 경계를 넘은 뒤 신뢰를 가속한다.\n\n---\n\n**나의 최종 입장**: Claude Code 쪽 강한 규정(\"깨진 링크 = 감점\")에 동의하되, 한 가지 더한다 — **실값이 없으면 placeholder를 채우지 말고 항목 자체를 비워라.** 연구자 평가에서 \"적지만 진짜\"는 \"많지만 `#`\"을 항상 이긴다. 따라서 1순위의 실질은 *링크 교체*가 아니라 *진짜만 남기기*다.\n\n---\n결론대로 진행하려면 아래 입력창에 **\"결론대로 진행해줘\"** 라고 보내세요 — 같은 흐름에서 실제 작업을 시작해요.",
+  "mode": "normal",
+  "files": [
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "src/app/globals.css",
+    "src/app/layout.tsx",
+    "src/app/page.tsx",
+    ".narani/",
+    "src/components/",
+    "src/lib/"
+  ],
+  "nodeIds": []
+}

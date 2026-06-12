@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "layers": [
+    "컨셉",
+    "도메인",
+    "컴포넌트",
+    "구현"
+  ],
+  "nodes": [
+    {
+      "id": "concept-root",
+      "layer": 1,
+      "parent": null,
+      "title": "프로젝트 컨셉",
+      "why": "AI 연구자(Efficient LLM)의 공식 홈페이지. 디자인 완성도보다 '검증 가능한 실적의 연결'이 신뢰의 핵심이다. 깨진/가짜 링크(#·루트 도메인)는 빈 칸보다 신뢰를 더 깎으므로 '진짜만 남기기'가 원칙이다.",
+      "what": "src/lib/data.ts 단일 파일이 콘텐츠 소스. 논문(publications)·프로젝트(projects)·소셜(socials)·CV·Scholar 지표를 데이터로 정의하고, 컴포넌트는 이를 렌더링. href 등 링크 필드는 모두 optional이며, 비어 있으면 해당 링크/버튼을 렌더하지 않는다.",
+      "how": "data.ts에서 placeholder 링크를 모두 제거(optional 스키마). Publications/Projects/Contact는 href 유무로 분기 렌더, bibtex가 있으면 BibTeX 복사 버튼, cvUrl이 있으면 CV 다운로드 버튼, scholar가 있으면 About에 인용 지표 배지. layout.tsx는 OG/twitter/metadataBase 메타데이터로 발견성 보강.",
+      "input": "data.ts에 채워 넣는 실제 URL/BibTeX/CV/지표(사용자 고유 정보).",
+      "output": "데이터가 채워지면 자동으로 노출되는 신뢰 가능한 연구자 사이트. 빈 값은 가짜 신호 없이 자동 숨김.",
+      "updatedBy": "agent",
+      "updatedAt": 1781284562411
+    }
+  ],
+  "edges": []
+}
