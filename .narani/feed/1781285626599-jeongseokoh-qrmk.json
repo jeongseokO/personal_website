@@ -1,0 +1,14 @@
+{
+  "id": "rmqb7ahk81:0:mqb7gxyf",
+  "ts": 1781285626599,
+  "author": "jeongseokoh",
+  "provider": "claude",
+  "title": "컨셉 그래프 생성/갱신 — 코드를 읽고 4계층 지도를 만들어요",
+  "summary": "컨셉 그래프 갱신 완료했습니다.\n\n## 결과 (`.narani/graph.json`)\n- **노드 25개** — 컨셉 1 · 도메인 5 · 컴포넌트 15 · 구현 4\n- **엣지 47개** — 구성/포함/데이터/조립/호출/구독 등 의존·흐름 방향 표기\n\n검증 통과: JSON 유효, 모든 하위 노드 parent 유효, 모든 엣지 from/to 실재, 빈 필드 0건, 기존 `concept-root` id·내용 보존.\n\n### 계층 요약\n- **컨셉**: `concept-root` (기존 보존)\n- **도메인 5**: `content-source`(data.ts) · `page-shell`(layout/page) · `section-rendering`(섹션 5개 + 링크 무결성 분기) · `visual-experience`(three.js·모션·테마) · `site-navigation`(navbar·진행바)\n- **컴포넌트 15**: data-types/data-entries, root-layout/home-page, 5개 섹션, hero-scene/scene-boundary/theme-toggle/reveal-motion, navbar/scroll-progress\n- **구현 4**: `cite-button`(BibTeX 복사) · `hyperlane`(워프 파티클) · `theme-store`(useSyncExternalStore+FOUC 스크립트) · `scrollspy`(IntersectionObserver)\n\n각 노드의 why/what/how/input/output은 실제 코드를 읽고 구체적으로 채웠습니다. 지시대로 `.narani/graph.json` 외 다른 파일은 변경하지 않았습니다.",
+  "mode": "plan",
+  "files": [
+    ".narani/graph.json",
+    ".narani/history/graph-1781285051457.json"
+  ],
+  "nodeIds": []
+}
