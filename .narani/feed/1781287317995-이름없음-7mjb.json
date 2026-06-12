@@ -1,0 +1,14 @@
+{
+  "id": "rmqb8glzn1:0:mqb8h71n",
+  "ts": 1781287317995,
+  "author": "이름없음",
+  "provider": "claude",
+  "title": "[콘텐츠 소스] 이 도메인은 뭐야?",
+  "summary": "`content-source` 도메인(L2)에 대한 설명입니다.\n\n## 콘텐츠 소스 도메인이란?\n\n**한 줄 요약**: 사이트의 모든 텍스트·링크·실적을 담은 **단일 진실 공급원(single source of truth)** 파일입니다. 실체는 `src/lib/data.ts` 하나입니다.\n\n### 왜 존재하나 (Why)\n비개발자도 이 **파일 하나만** 고치면 사이트 내용이 바뀌도록 하기 위함입니다. 동시에 \"깨진/가짜 링크 금지\" 원칙을 **타입 레벨에서 강제**합니다.\n\n### 무엇을 export 하나 (What)\n- `profile` — 이름·역할·tagline·about·email·socials·(cvUrl·scholar는 optional)\n- `skills` — 연구 관심사/기술 스택 문자열 배열\n- `publications` — 논문 배열 (title·venue·year·authors, href·bibtex는 optional)\n- `projects` — 오픈소스 프로젝트 배열 (href는 optional)\n- 타입: `Social` / `ScholarStats` / `Profile` / `Publication` / `Project`\n\n### 핵심 메커니즘 (How)\n모든 외부 링크 필드(`href`, `cvUrl`, `scholar`, `bibtex`)를 **optional(`?`)** 로 선언하고 placeholder는 비워둡니다. 컴포넌트가 값 유무로 렌더를 분기하므로 **빈 값은 UI에서 자동으로 사라집니다**. 파일 상단 주석에 링크 원칙이 명시돼 있습니다:\n> `#`이나 루트 도메인(`https://github.com/`)은 절대 금지 — 깨진 링크는 빈 칸보다 신뢰를 더 깎습니다.\n\n### 현재 상태\n실제 콘텐츠(논문 4편, 프로젝트 4개, 스킬 10개)는 채워져 있지만, **외부 URL·BibTeX·CV·Scholar 지표는 전부 `TODO`로 비어 있는** 상태입니다. 즉 데이터의 \"뼈대\"는 완성됐고 사용자가 실제 링크만 채우면 됩니다.\n\n---\n\n그래프 노드 설명을 실제 파일과 대조해보니 이미 정확하고 충분합니다. 한 가지 보완할 점은 **`tagline`이 what에 빠져 있고**, **현재 모든 외부 링크가 미충전(TODO) 상태라는 점**입니다. 다만 플랜 모드라 `graph.json`은 수정하지 않았습니다 — 갱신을 원하시면 알려주세요.",
+  "mode": "plan",
+  "files": [
+    ".narani/history/graph-1781285051457.json",
+    ".narani/history/graph-1781285641619.json"
+  ],
+  "nodeIds": []
+}
