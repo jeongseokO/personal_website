@@ -1,0 +1,14 @@
+{
+  "id": "rmqbrlf0m1:1:mqbrmf1z",
+  "ts": 1781319474359,
+  "author": "Jeongseok Oh",
+  "provider": "codex",
+  "title": "서버를 열어줘",
+  "summary": "서버 실행을 시도했지만 현재 환경이 포트 바인딩을 막고 있어 실패했습니다.\n\n실패한 명령:\n```bash\nnpm run dev\nnpx next dev --hostname 127.0.0.1 --port 3000\n```\n\n오류:\n```text\nlisten EPERM: operation not permitted\n```\n\n파일은 변경하지 않았습니다. 로컬 터미널에서 아래 명령을 직접 실행하면 됩니다:\n\n```bash\ncd /Users/jeongseokoh/Documents/GorgeousWebsite\nnpm run dev\n```\n\n정상 실행 시 주소는 `http://localhost:3000`입니다.",
+  "mode": "plan",
+  "files": [
+    ".narani/history/graph-1781285051457.json",
+    ".narani/history/graph-1781285641619.json"
+  ],
+  "nodeIds": []
+}
