@@ -1,0 +1,14 @@
+{
+  "id": "rmqbrlf0m1:0:mqbrllup",
+  "ts": 1781319436513,
+  "author": "Jeongseok Oh",
+  "provider": "codex",
+  "title": "서버를 열어줘",
+  "summary": "실행 계획:\n\n1. 프로젝트 구조와 `package.json`을 확인해 실행 스크립트를 파악한다.\n2. AGENTS 지시에 따라 필요한 경우 `node_modules/next/dist/docs/`의 관련 Next.js 문서를 확인한다.\n3. 적절한 개발 서버 명령어를 실행한다.\n4. 서버 URL과 실행 상태를 알려준다.\n\n승인해주시면 진행하겠습니다.",
+  "mode": "plan",
+  "files": [
+    ".narani/history/graph-1781285051457.json",
+    ".narani/history/graph-1781285641619.json"
+  ],
+  "nodeIds": []
+}
