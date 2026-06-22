@@ -1,0 +1,15 @@
+{
+  "id": "restored-0:1:mqos8gdw",
+  "ts": 1782106562804,
+  "author": "Jeongseok Oh",
+  "provider": "claude",
+  "title": "작업 계획 세우기",
+  "summary": "네, 연결됐습니다. narani MCP 도구도 사용 가능합니다.\n\n지금은 플랜 모드라 코드를 변경하지 않고, 먼저 맥락을 파악합니다. 무엇을 도와드릴까요? 작업할 내용을 알려주시면 코드베이스를 살펴보고 계획을 세우겠습니다.",
+  "mode": "plan",
+  "files": [
+    ".narani/history/graph-1781285051457.json",
+    ".narani/history/graph-1781285641619.json",
+    ".narani/history/graph-1781334482070.json"
+  ],
+  "nodeIds": []
+}
