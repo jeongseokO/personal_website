@@ -66,11 +66,11 @@
       "title": "시각 경험",
       "why": "연구자 사이트의 첫인상과 몰입감을 주는 시각 요소를 담당하되, WebGL 실패·동작 줄이기 선호·테마 깜빡임 같은 견고성 요구를 충족하기 위함.",
       "what": "three.js 히어로 씬(HeroScene/Hyperlane), 에러 폴백(SceneBoundary), 다크/라이트 테마 토글(ThemeToggle), 스크롤 인 모션 래퍼(Section의 Reveal/SectionTitle).",
-      "how": "HeroScene을 dynamic import(ssr:false)로 클라이언트에서만 로드하고 SceneBoundary 에러바운더리로 감싸 폴백 그래디언트 보장. Hyperlane은 useFrame으로 파티클을 갱신하며 useReducedMotion을 존중. ThemeToggle은 DOM data-theme를 진실 원천으로 구독. Reveal은 viewport once 인뷰 애니메이션.",
+      "how": "HeroScene을 dynamic import(ssr:false)로 클라이언트에서만 로드하고 SceneBoundary 에러바운더리로 감싸 폴백 그래디언트 보장. Hyperlane은 6개 차선의 lineSegments 워프 스트릭을 useFrame으로 z 전진시켜 갱신(NEAR 통과 시 FAR 재투입)하고 Bloom으로 발광 강화하며 useReducedMotion을 존중. ThemeToggle은 useSyncExternalStore+MutationObserver로 DOM data-theme를 진실 원천으로 구독. Reveal은 framer-motion viewport once 인뷰 fade+slide-up 애니메이션.",
       "input": "useReducedMotion 선호도, WebGL 컨텍스트 가용성, localStorage 테마 값.",
       "output": "워프 스트릭 히어로 배경, 부드러운 스크롤 인 효과, 깜빡임 없는 테마 전환, 실패 시 폴백 배경.",
       "updatedBy": "agent",
-      "updatedAt": 1781285465374
+      "updatedAt": 1781285700000
     },
     {
       "id": "site-navigation",

@@ -1,0 +1,16 @@
+{
+  "id": "rmqorg9o61:0:mqorqrah",
+  "ts": 1782105737129,
+  "author": "Jeongseok Oh",
+  "provider": "claude",
+  "title": "작업 계획 세우기",
+  "summary": "알겠습니다. narani 연결까지 등록은 대기하겠습니다. 분석과 작업 목록은 plan 파일(`snappy-doodling-quokka.md`)에 정리해 뒀습니다. narani MCP가 연결되면 그때 `mcp__narani__create_task`로 아래 8개를 등록하겠습니다.\n\n## 등록 대기 중인 작업 (우선순위 1=높음 ~ 3=낮음)\n\n**현 상태 요약**: `content/link-integrity` 브랜치의 핵심 구조(placeholder 제거 + href optional화 → 실값 없으면 자동 숨김)는 완성. 남은 건 실콘텐츠·강제 가드·배포/발견성·테스트·점검.\n\n| # | P | 작업 | 요지 |\n|---|---|------|------|\n| 1 | 1 | data.ts 실제 콘텐츠 채우기 | `src/lib/data.ts` 21개 TODO(프로필/소셜/논문 href·bibtex/프로젝트 repo)에 검증 가능한 실값 입력 |\n| 2 | 1 | 링크 무결성 자동 가드 | `#`·루트도메인·빈 href가 들어오면 실패하는 lint/test 추가 → 원칙을 코드로 강제(회귀 방지) |\n| 3 | 2 | 배포 메타데이터 완성 | `layout.tsx` `metadataBase`를 실도메인으로, OG/Twitter 점검 |\n| 4 | 2 | OG 이미지·CV 에셋 | `public/og.png`(1200×630)·`public/cv.pdf` 추가 후 연결 |\n| 5 | 2 | 테스트 인프라 도입 | Vitest+RTL 도입, 조건부 렌더 분기·링크 가드 최소 테스트 |\n| 6 | 3 | 접근성·SEO 점검 | alt/aria/포커스, sitemap·robots, meta description |\n| 7 | 3 | CI 파이프라인 | lint+build(+가드/테스트) GitHub Actions |\n| 8 | 3 | 3D 폴백·성능 점검 | SceneBoundary 폴백, prefers-reduced-motion, Lighthouse |\n\n참고: 이 8개 중 `data.ts`의 **타입(스키마)을 바꾸는 항목은 없어** 마이그레이션 체크리스트는 불필요합니다. 만약 향후 작업 2(가드)나 콘텐츠 작업에서 타입을 손대게 되면 그땐 마이그레이션 항목을 추가하겠습니다.\n\nnarani가 연결되면 알려주세요. 바로 등록하겠습니다.",
+  "mode": "plan",
+  "files": [
+    ".narani/graph.json",
+    ".narani/history/graph-1781285051457.json",
+    ".narani/history/graph-1781285641619.json",
+    ".narani/history/graph-1781334482070.json"
+  ],
+  "nodeIds": []
+}
